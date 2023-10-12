@@ -15,10 +15,10 @@ void times_table(void)
 			if (j == 0)
 				_putchar('0');
 			else if (p < 10)
+			{
 				_putchar(' ');
-
-			if (p < 10)
-				_putchar((p + '0'));
+				_putchar(p + '0');
+			}
 			else
 			{
 				_putchar((p / 10) + '0');
