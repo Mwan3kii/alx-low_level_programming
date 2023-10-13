@@ -14,6 +14,7 @@ int main(void)
 	unsigned long int bef2;
 	unsigned long int aft1;
 	unsigned long int aft2;
+	unsigned long int sum;
 
 	printf("%lu, %lu", bef, aft);
 
