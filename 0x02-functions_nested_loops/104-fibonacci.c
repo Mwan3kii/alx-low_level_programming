@@ -15,18 +15,33 @@ int main(void)
 	unsigned long int aft1;
 	unsigned long int aft2;
 
-	printf("%lu", bef);
+	printf("%lu, %lu", bef, aft);
 
-	for (i = 2; i < 99; i++)
+	for (i = 2; i < 98; i++)
 	{
-		printf(", %lu", aft);
 		bef1 = (bef / l);
 		bef2 = (bef % l);
 		aft1 = (aft / l);
 		aft2 = (aft % l);
 
-		aft = aft1 + aft2;
-		bef = bef1 + bef2 + ((aft1 + aft2) / l);
+		unsigned long int sum = bef2 + aft2;
+
+		if (sum >= l)
+		{
+			sum -= l;
+			bef1++;
+		}
+
+		unsigned long int aft_low = sum;
+		unsigned long int aft_high = bef1 + aft1;
+
+		if (aft_high >= l)
+		{
+			aft_high -= l;
+		}
+		bef = aft;
+		aft = aft_high * l + aft_low;
+		printf(",%lu", aft);
 	}
 	printf("\n");
 	return (0);
