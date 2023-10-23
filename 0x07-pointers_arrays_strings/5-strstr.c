@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strstr - main function
  * @needle: function parameter
@@ -19,8 +20,8 @@ char *_strstr(char *haystack, char *needle)
 			h++;
 			n++;
 		}
-		if (*h == '\0')
+		if (*n == '\0')
 			return (haystack);
 	}
-	return (0);
+	return (NULL);
 }
