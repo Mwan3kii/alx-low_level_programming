@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 }
 /**
  * sqrt_a - return the natural square root of a number
- * @n: input number
+ * @a: input number
  * @b: iterator
  *
  * Return: square root or -1
