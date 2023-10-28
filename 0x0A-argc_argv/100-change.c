@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
 		while (cents >= coins[i])
 		{
 			cents -= coins[i];
+			mncoins++;
 		}
-		mncoins++;
 	}
 	printf("%d\n", mncoins);
 	return (0);
