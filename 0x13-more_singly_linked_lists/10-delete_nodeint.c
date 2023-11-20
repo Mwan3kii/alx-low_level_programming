@@ -3,8 +3,7 @@
  * delete_nodeint_at_index - deletes the node at index of list
  * @head: start of node
  * @index: then index to be deleted starts 0
- * Return: 1 if it succeeded
- * -1 if it failed
+ * Return: 1 if it succeeded or -1 if it failed
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -30,7 +29,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (temp->next == NULL)
 			node = temp->next;
 		else
-			node = temp->next;
+			node = temp->next->next;
 		free(temp->next);
 		temp->next = node;
 	}
