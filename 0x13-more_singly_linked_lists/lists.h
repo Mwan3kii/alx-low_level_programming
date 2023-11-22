@@ -29,6 +29,7 @@ typedef struct listpr_s
 	void *p;
 	struct listpr_s *next;
 } listpr_t;
+void free_listpr2(listpr_t **head);
 void free_listpr(listpr_t **head);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
