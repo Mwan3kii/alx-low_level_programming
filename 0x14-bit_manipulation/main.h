@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdio.h>
 
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
@@ -9,5 +10,6 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 int _putchar(char c);
 int get_endianness(void);
+void print_bi_rec(unsigned long int n);
 
 #endif
